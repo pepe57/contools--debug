@@ -6,7 +6,7 @@ cd "%~dp0"
 
 set "REM_ECHO=_externals\userbin\scripts\bat\rem-echo.bat"
 
-set ?.=^^^<nul 2^^^>nul start /B /WAIT "" cmd.exe /c @start /WAIT "" cmd.exe /k @echo close me!
+set ?.=^^^<nul 2^^^>nul start "" /B /WAIT cmd.exe /c @start "" /WAIT cmd.exe /k @echo close me!
 
 set ?.
 
@@ -25,7 +25,7 @@ echo on
 
 @echo 2. start+exe cmdline expansion with old environment
 
-start /I /B /WAIT "" "!COMSPEC!" /c @"!REM_ECHO!" !?.!
+start "" /I /B /WAIT "!COMSPEC!" /c @"!REM_ECHO!" !?.!
 
 @echo ---
 
