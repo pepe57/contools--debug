@@ -4,9 +4,10 @@ setlocal DISABLEDELAYEDEXPANSION
 
 (
   setlocal DISABLEEXTENSIONS
-  (set PROMPT=$_)
+  (PROMPT=$_)
   echo on
-  for %%z in (%%z) do rem * %*#
+  for %%z in (%%z) do ^
+rem |%*|
   @echo off
   endlocal
 )
